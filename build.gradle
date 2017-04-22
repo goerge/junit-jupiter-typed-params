@@ -25,6 +25,15 @@ jar {
 	version = project.version
 }
 
+task sourcesJar(type: Jar) {
+	from sourceSets.main.java.srcDirs
+	classifier = 'sources'
+}
+
+artifacts {
+	archives sourcesJar
+}
+
 compileTestJava {
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
