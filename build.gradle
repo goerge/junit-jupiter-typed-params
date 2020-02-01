@@ -41,7 +41,7 @@ compileTestJava {
 }
 
 dependencies {
-    compile("org.junit.jupiter:junit-jupiter-params:5.0.0-M4")
+    compile("org.junit.jupiter:junit-jupiter-params:5.6.0")
 
 	testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
     testCompile("org.assertj:assertj-core:3.6.2")
