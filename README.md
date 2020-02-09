@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'com.github.goerge:junit-jupiter-typed-params:0.1.0'
+    testCompile 'com.github.goerge:junit-jupiter-typed-params:1.0.0'
 }
 ```
 [![Release](https://jitpack.io/v/goerge/junit-jupiter-typed-params.svg?style=flat-square)](https://jitpack.io/#goerge/junit-jupiter-typed-params)
