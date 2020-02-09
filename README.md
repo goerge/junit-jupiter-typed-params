@@ -31,3 +31,4 @@ dependencies {
 }
 ```
 [![Release](https://jitpack.io/v/goerge/junit-jupiter-typed-params.svg?style=flat-square)](https://jitpack.io/#goerge/junit-jupiter-typed-params)
+[![Build Status](https://travis-ci.org/goerge/junit-jupiter-typed-params.svg?branch=master)](https://travis-ci.org/goerge/junit-jupiter-typed-params)
