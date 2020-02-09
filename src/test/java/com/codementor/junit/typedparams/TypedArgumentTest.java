@@ -18,7 +18,7 @@ public class TypedArgumentTest {
 		}
 
 		@ParameterizedTest
-		@MethodSource(names = "arguments")
+		@MethodSource("arguments")
 		void personIsAdultWithArguments(final int age, final boolean isAdult) {
 				assertThat(new Person(age).isAdult()).isEqualTo(isAdult);
 		}
