@@ -1,16 +1,13 @@
-repositories {
-    mavenCentral()
+plugins {
+	id 'java'
+	id 'maven'
 }
-
-apply plugin: 'java'
-apply plugin: 'maven'
 
 group 'com.code-mentor'
 version '2.0.0-SNAPSHOT'
 
 jar {
 	archiveBaseName = project.name
-	version = project.version
 }
 
 task sourcesJar(type: Jar) {
@@ -23,20 +20,23 @@ artifacts {
 }
 
 compileTestJava {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-    options.compilerArgs += '-parameters'
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	options.compilerArgs += '-parameters'
 }
 
 test {
 	useJUnitPlatform()
 }
 
+repositories {
+	mavenCentral()
+}
+
 dependencies {
-    compile("org.junit.jupiter:junit-jupiter-params:5.6.0")
+	implementation("org.junit.jupiter:junit-jupiter-params:5.6.0")
 
-	testCompile("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testCompile("org.assertj:assertj-core:3.15.0")
+	testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+	testImplementation("org.assertj:assertj-core:3.15.0")
 
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
 }
